@@ -4,7 +4,7 @@ import open3d as o3d
 import imageio.v3 as iio
 
 # Read depth image as grayscale to ensure single channel:
-depth_image = iio.imread('images/grayscale.png', mode='I')
+depth_image = iio.imread('../images/grayscale.png', mode='I')
 
 # Print properties:
 print(f"Image resolution: {depth_image.shape}")

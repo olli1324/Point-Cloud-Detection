@@ -5,8 +5,8 @@ import imageio.v3 as iio
 
 
 # read the color and the depth image:
-color_raw = o3d.io.read_image("images/rgb.jpg")
-depth_raw = o3d.io.read_image("images/depth.png")
+color_raw = o3d.io.read_image("../images/rgb.jpg")
+depth_raw = o3d.io.read_image("../images/depth.png")
 
 # create an rgbd image object:
 rgbd_image = o3d.geometry.RGBDImage.create_from_color_and_depth(

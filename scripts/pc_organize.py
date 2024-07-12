@@ -1,7 +1,7 @@
 import imageio.v3 as iio
 import numpy as np
 import matplotlib.pyplot as plt
-import ground_det as g
+import ground_detection as g
 import open3d as o3d
 
 # Camera parameters:
@@ -52,17 +52,17 @@ for i in range(height):
 
 #UNDER PRODUCTION
 
-# # color x_min
-# colors = [g.RED, g.GREEN, g.BLUE, g.MAGENTA, g.YELLOW, g.CYAN]
+# color x_min
+colors = [g.RED, g.GREEN, g.BLUE, g.MAGENTA, g.YELLOW, g.CYAN]
 
-# depth_image_colors = np.asarray(depth_image.colors)
-# n_points = depth_image_colors.shape[0]
-# for i in range(n_points):
-#     if depth_image.points[i][1] <= g.x_min - THRESHOLD:
-#         depth_image_colors[i] = g.BLUE
+org_pcd_colors = np.asarray(organized_pcd.colors)
+n_points = org_pcd_colors.shape[0]
+for i in range(n_points):
+    if organized_pcd.points[i][1] <= g.x_min - THRESHOLD:
+        org_pcd_colors[i] = g.GRAY
 
-# depth_image.colors = o3d.utility.Vector3dVector(depth_image_colors)
-# o3d.visualization.draw_geometries(depth_image)
+organized_pcd.colors = o3d.utility.Vector3dVector(org_pcd_colors)
+o3d.visualization.draw_geometries(organized_pcd)
 
 
 # Display depth_grayscale:
