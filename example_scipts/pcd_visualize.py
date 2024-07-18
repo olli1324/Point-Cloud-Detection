@@ -48,7 +48,7 @@ pcd_o3d.points = o3d.utility.Vector3dVector(pcd_np)  # set pcd_np as the point c
 
 
 # Read the bunny point cloud file:
-pcd_o3d = o3d.io.read_point_cloud("..output/bunny_pcd.ply")
+pcd_o3d = o3d.io.read_point_cloud("data/ulmatec.ply")
 # Convert the open3d object to numpy:
 pcd1_np = np.asarray(pcd_o3d.points)
 # Display using matplotlib:
