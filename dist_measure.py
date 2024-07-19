@@ -1,4 +1,4 @@
-from open3d import * 
+from open3d import *
 import open3d as o3d
 import numpy as np
 

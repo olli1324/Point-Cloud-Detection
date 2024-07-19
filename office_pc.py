@@ -5,7 +5,7 @@ import copy
 import os
 
 print("Load a ply point cloud, print and render")
-pcd = o3d.io.read_point_cloud("data/ulmatec.ply")
+pcd = o3d.io.read_point_cloud("data/ulma.laz")
 print(pcd)
 print(np.asarray(pcd.points))
 # o3d.visualization.draw_geometries([pcd])
@@ -20,7 +20,7 @@ print(np.asarray(pcd.points))
 # Compute Normals
 print("Recompute the normal of downpcd")
 pcd.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.1, max_nn=30))
-o3d.visualization.draw_geometries([downpcd],point_show_normal=True) 
+o3d.visualization.draw_geometries([pcd],point_show_normal=True) 
 
 
 # Surface Reconstruction
