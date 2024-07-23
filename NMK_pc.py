@@ -5,7 +5,7 @@ import copy
 import os
 
 print("Load a ply point cloud, print and render")
-pcd = o3d.io.read_point_cloud("data/ulma.laz")
+pcd = o3d.io.read_point_cloud("data/ulma.laz") # Program not compatible with .laz yet
 print(pcd)
 print(np.asarray(pcd.points))
 # o3d.visualization.draw_geometries([pcd])
